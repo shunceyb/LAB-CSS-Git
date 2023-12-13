@@ -14,6 +14,8 @@ function updatePage() {
   }
   if(document.getElementById(window.location.hash)) {
     document.getElementById(window.location.hash).style.display = "flex"
+  } else {
+    window.location = '#home'
   }
 }
 
