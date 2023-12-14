@@ -5,7 +5,6 @@ Inspiration for 3D - https://github.com/gjmolter/web-3dmodel-threejs
 
 
 import * as THREE from "./three.module.js";
-import { OrbitControls } from "./OrbitControls.js";
 import { STLLoader } from './STLLoader.js'
 
 const scene = new THREE.Scene();
@@ -15,8 +14,6 @@ pointLight.castShadow = true
 camera.translateY(15)
 
 let object;
-
-let objToRender = 'eye';
 
 const loader = new STLLoader()
 const textureLoader = new THREE.TextureLoader();
@@ -61,14 +58,10 @@ renderer.setClearColor(0xffffff, 0.5)
 
 document.getElementById("benchy-container").appendChild(renderer.domElement);
 
-camera.position.z = objToRender === "dino" ? 25 : 500;
+camera.position.z = 500;
 
-const ambientLight = new THREE.AmbientLight(0x333333, objToRender === "dino" ? 5 : 1);
+const ambientLight = new THREE.AmbientLight(0x333333, 1);
 scene.add(ambientLight);
-
-if (objToRender === "dino") {
-  controls = new OrbitControls(camera, renderer.domElement);
-}
 
 renderer.render(scene, camera); 
 
@@ -76,7 +69,7 @@ function animate() {
   requestAnimationFrame(animate);
 
   if (object) {
-    object.rotation.z += 0.01
+    object.rotation.z += 0.007
   }
   renderer.render(scene, camera); 
 }
