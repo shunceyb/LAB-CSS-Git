@@ -4,9 +4,9 @@ Inspiration for 3D - https://github.com/gjmolter/web-3dmodel-threejs
 */
 
 
-import * as THREE from "https://unpkg.com/three@0.159.0/build/three.module.js";
-import { OrbitControls } from "https://unpkg.com/three@0.159.0/examples/jsm/controls/OrbitControls.js";
-import { STLLoader } from 'https://unpkg.com/three@0.159.0/examples/jsm/loaders/STLLoader'
+import * as THREE from "./three.module.js";
+import { OrbitControls } from "./OrbitControls.js";
+import { STLLoader } from './STLLoader.js'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(10, 300 / 300, 0.1, 1000);
