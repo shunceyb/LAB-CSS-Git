@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+            "OrbitControls": "https://unpkg.com/three@0.159.0/examples/jsm/controls/OrbitControls.js"
+        }
+    }
+</script>
+<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div id="prod-card">
+    <span class="material-symbols-outlined" id="bag">
+      shopping_bag
+    </span>
+    <div id="benchy-container"></div>
+    <div id="prod-card-info">
+      <p style="font-weight: 500; font-size: larger;">Benchy</p>
+      <p style="font-weight: 200;">I woke up in a new buggati</p>
+      <div id="rating">
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined">star</span>
+        <span class="material-symbols-outlined filldnt">star</span>
+        <span class="material-symbols-outlined filldnt">star</span>
+      </div>
+      <div id="color-and-price">
+        <div id="color-picker">
+          <span id="color-text">
+            Color
+          </span>
+          <div id="color-selector">
+            <span id="0" class="color" style="background-color: #c9e4de;" onclick="setActive(0)"></span>
+            <span id="1" class="color" style="background-color: #dbcdf0;" onclick="setActive(1)"></span>
+            <span id="2" class="color" style="background-color: #f7d9c4;" onclick="setActive(2)"></span>
+          </div>
+        </div>
+        <div id="price">
+          <span id="price-num">
+            ฿69.00
+          </span>
+          <span id="price-text">
+            Sixty-Nine Baht Only
+          </span>
+        </div>
+      </div>
+      <button id="atc">Add To Cart</button>
+    </div>
+  </div>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
