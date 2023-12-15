@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In and Sign Up</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/c9cc4a8571.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <div id="login" class="container">
+    <span class="txt-top" id="login-text">Login</span>
+    <form>
+      <div class="input-container">
+        <i class="fa-solid fa-envelope icon"></i>
+        <input type="text" placeholder="Enter your E-mail">
+      </div>
+      <div class="input-container">
+        <i class="fa-solid fa-lock icon"></i>
+        <input type="password" placeholder="Enter your password" id="login-pw">
+        <i class="fa-solid fa-eye-slash icon hide" data-input-id="login-pw"></i>
+      </div>
+      <div id="rmfp-container">
+        <div class="rm">
+          <input type="checkbox">
+          <span>Remember me</span>
+        </div>
+        <span id="fp">Forgot password?</span>
+      </div>
+      <button id="lgn-btn">Login</button>
+      <div class="nam">
+        <span>Not a member?</span>
+        <span>
+          <a href="register.html">
+            Register
+          </a>
+        </span>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
